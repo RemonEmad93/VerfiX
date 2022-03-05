@@ -71,7 +71,7 @@ def signUp():
 
 # @app.route('/signUp', methods=['POST'])
 # def signUp_post():
-#     return redirect('/')
+#     return redirect('/') 
 
 @app.route('/login', methods=['GET','POST'])
 def login():
