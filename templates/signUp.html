@@ -1,0 +1,107 @@
+{%extends "layout.html"%}
+
+{%block content%}
+<h1>sign up page</h1>
+
+<main class=" container form-signin">
+    <form action="" method="POST">
+      {{ form.hidden_tag() }}
+      <img class="mb-4" src="../static/images/104-1044449_python-logo-clipart-drawing-flask-python-hd-png.png" alt="Flask Image" width="10%" height="10%">
+      <h1 class="h3 mb-3 fw-normal">Please sign up</h1>
+  
+      <div class="form-group">
+        {{ form.name.label(class="form-control-label") }}
+
+        {% if form.name.errors %}
+            {{ form.name(class="form-control form-control-lg is-invalid") }}
+            <div class="invalid-feedback">
+                {% for error in form.name.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+        {% else %}
+            {{ form.name(class="form-control form-control-lg") }}
+        {% endif %}
+      </div>
+
+      <div class="form-group">
+        {{ form.username.label(class="form-control-label") }}
+
+        {% if form.username.errors %}
+            {{ form.username(class="form-control form-control-lg is-invalid") }}
+            <div class="invalid-feedback">
+                {% for error in form.username.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+        {% else %}
+            {{ form.username(class="form-control form-control-lg") }}
+        {% endif %}
+      </div>
+
+      <div class="form-group">
+        {{ form.email.label(class="form-control-label") }}
+
+        {% if form.email.errors %}
+            {{ form.email(class="form-control form-control-lg is-invalid") }}
+            <div class="invalid-feedback">
+                {% for error in form.email.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+        {% else %}
+            {{ form.email(class="form-control form-control-lg") }}
+        {% endif %}
+      </div>
+
+      <div class="form-group">
+        {{ form.password.label(class="form-control-label") }}
+
+        {% if form.password.errors %}
+            {{ form.password(class="form-control form-control-lg is-invalid") }}
+            <div class="invalid-feedback">
+                {% for error in form.password.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+        {% else %}
+            {{ form.password(class="form-control form-control-lg") }}
+        {% endif %}
+      </div>
+
+      <div class="form-group">
+        {{ form.confirmPassword.label(class="form-control-label") }}
+
+        {% if form.confirmPassword.errors %}
+            {{ form.confirmPassword(class="form-control form-control-lg is-invalid") }}
+            <div class="invalid-feedback">
+                {% for error in form.confirmPassword.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+        {% else %}
+            {{ form.confirmPassword(class="form-control form-control-lg") }}
+        {% endif %}
+      </div>
+
+      <div class="form-group">
+        {{ form.submit(class="btn btn-info btn-lg") }}
+      </div>
+
+      <!-- <div class="form-floating">
+        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+        <label for="floatingPassword">Password</label>
+      </div>
+  
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+      
+      <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+      <p class="mt-5 mb-3 text-muted">© 2017–2021</p> -->
+    </form>
+</main>
+{%endblock content%}
+
